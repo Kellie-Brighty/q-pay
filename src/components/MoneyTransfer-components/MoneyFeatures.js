@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     margin: "auto",
     background: "transparent",
-    alignItems: 'center'
+    alignItems: "center",
   },
   left_feature: {
     background: "transparent",
