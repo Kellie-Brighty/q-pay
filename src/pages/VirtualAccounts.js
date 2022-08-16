@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { makeStyles } from "@material-ui/styles";
 import Header from "../components/General-components/Header";
 import DynamicNav from "../components/General-components/DynamicNav";
+import GetStarted from "../components/General-components/GetStarted";
+import AdsBox from "../components/General-components/AdsBox";
+import Footer from "../components/General-components/Footer";
+import VirtualHero from "../components/VirtualAccounts_components/VirtualHero";
+import VirtualFeatures from "../components/VirtualAccounts_components/VirtualFeatures";
 
 const useStyles = makeStyles((theme) => ({
   body: {
@@ -13,11 +18,29 @@ const useStyles = makeStyles((theme) => ({
 const VirtualAccounts = () => {
   const classes = useStyles();
 
+  const scrollToTop = () => {
+    if (document.body.scrollTop > 0) {
+      document.body.scrollTop = 0;
+    }
+  };
+  window.onscroll = scrollToTop()
+
+  useEffect(() => {
+    scrollToTop()
+    console.log(document.body.scrollTop)
+  }, [])
+
   return (
     <div>
       <Header />
       <DynamicNav />
-      <div style={{ color: "#fff" }}>Virtual Accounts</div>
+      <div className={classes.body}>
+        <VirtualHero />
+        <VirtualFeatures />
+        <GetStarted />
+        <AdsBox />
+        <Footer />
+      </div>
     </div>
   );
 };

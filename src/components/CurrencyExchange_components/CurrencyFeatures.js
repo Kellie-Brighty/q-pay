@@ -106,7 +106,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const MoneyFeatures = () => {
+const CurrencyFeatures = () => {
   const classes = useStyles();
   return (
     <div className={classes.body}>
@@ -114,25 +114,33 @@ const MoneyFeatures = () => {
         <div className={classes.feature_box}>
           <div className={classes.inner_flex}>
             <div className={classes.left_feature}>
-              <p className={classes.title}>USERNAMES</p>
+              <div className={classes.title_flex}>
+                <p className={classes.title}>P2P EXCHANGE /</p>
+                <p className={classes.title_white}>COMING SOON</p>
+              </div>
               <p className={classes.first_text}>
-                Quickly send money to another{" "}
-                <span className={classes.colored_text}>Qpay user</span>.
+                Meet with verified{" "}
+                <span className={classes.colored_text}>
+                  {" "}
+                  currency exchangers
+                </span>
+                .
               </p>
               <p className={classes.second_text}>
-                Make fast to another Qpay user using their Qpay ID.
+                Meet with our Peer-to-Peer currency exchangers at highly
+                compettitive exchange rate.
               </p>
 
               <div className={classes.btn_section}>
                 <button className={classes.btn}>
-                  <span className={classes.btn_text}>Get your username</span>
+                  <span className={classes.btn_text}>Get Early Access</span>
                   <HiChevronRight className={classes.btn_icon} />
                 </button>
               </div>
             </div>
 
             <div className={classes.right_feature}>
-              <img src="usernames.png" className={classes.img} />
+              <img src="p2p_exchange.png" className={classes.img} />
             </div>
           </div>
         </div>
@@ -166,39 +174,9 @@ const MoneyFeatures = () => {
             </div>
           </div>
         </div>
-
-        <div className={classes.feature_box}>
-          <div className={classes.inner_flex}>
-            <div className={classes.left_feature}>
-              <div className={classes.title_flex}>
-                <p className={classes.title}>FOREIGN VIRTUAL ACCOUNT /</p>
-                <p className={classes.title_white}>COMING SOON</p>
-              </div>
-              <p className={classes.first_text}>
-                Request and get your{" "}
-                <span className={classes.colored_text}>global account</span>.
-              </p>
-              <p className={classes.second_text}>
-                Create a personal foreign virtual account for your USD, EUR and
-                GBP payments.
-              </p>
-
-              <div className={classes.btn_section}>
-                <button className={classes.btn}>
-                  <span className={classes.btn_text}>Get Early Access</span>
-                  <HiChevronRight className={classes.btn_icon} />
-                </button>
-              </div>
-            </div>
-
-            <div className={classes.right_feature}>
-              <img src="virtual_account.png" className={classes.img} />
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
 
-export default MoneyFeatures;
+export default CurrencyFeatures;

@@ -106,7 +106,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const MoneyFeatures = () => {
+const VirtualFeatures = () => {
   const classes = useStyles();
   return (
     <div className={classes.body}>
@@ -114,13 +114,17 @@ const MoneyFeatures = () => {
         <div className={classes.feature_box}>
           <div className={classes.inner_flex}>
             <div className={classes.left_feature}>
-              <p className={classes.title}>USERNAMES</p>
+              <div className={classes.title_flex}>
+                <p className={classes.title}>VIRTUAL ACCOUNT /</p>
+                <p className={classes.title_white}>COMING SOON</p>
+              </div>
               <p className={classes.first_text}>
-                Quickly send money to another{" "}
-                <span className={classes.colored_text}>Qpay user</span>.
+                Make money move{" "}
+                <span className={classes.colored_text}>across borders</span>.
               </p>
               <p className={classes.second_text}>
-                Make fast to another Qpay user using their Qpay ID.
+                Crete a personal foreign virtual account for USD, EUR and GBP
+                payments
               </p>
 
               <div className={classes.btn_section}>
@@ -132,7 +136,7 @@ const MoneyFeatures = () => {
             </div>
 
             <div className={classes.right_feature}>
-              <img src="usernames.png" className={classes.img} />
+              <img src="virtual_account.png" className={classes.img} />
             </div>
           </div>
         </div>
@@ -141,46 +145,15 @@ const MoneyFeatures = () => {
           <div className={classes.inner_flex}>
             <div className={classes.left_feature}>
               <div className={classes.title_flex}>
-                <p className={classes.title}>QPAY EXPRESS /</p>
+                <p className={classes.title}>VIRTUAL ACCOUNT /</p>
                 <p className={classes.title_white}>COMING SOON</p>
               </div>
               <p className={classes.first_text}>
-                Get your money wired to naira{" "}
-                <span className={classes.colored_text}>in seconds</span>.
+                Make seamless transactions with{" "}
+                <span className={classes.colored_text}>virtual cards</span>.
               </p>
               <p className={classes.second_text}>
-                Just send to Qpay's Exchange hh get it wired into your Naira
-                wallet in minutes.
-              </p>
-
-              <div className={classes.btn_section}>
-                <button className={classes.btn}>
-                  <span className={classes.btn_text}>Exchange my money</span>
-                  <HiChevronRight className={classes.btn_icon} />
-                </button>
-              </div>
-            </div>
-
-            <div className={classes.right_feature}>
-              <img src="qpay_express.png" className={classes.img} />
-            </div>
-          </div>
-        </div>
-
-        <div className={classes.feature_box}>
-          <div className={classes.inner_flex}>
-            <div className={classes.left_feature}>
-              <div className={classes.title_flex}>
-                <p className={classes.title}>FOREIGN VIRTUAL ACCOUNT /</p>
-                <p className={classes.title_white}>COMING SOON</p>
-              </div>
-              <p className={classes.first_text}>
-                Request and get your{" "}
-                <span className={classes.colored_text}>global account</span>.
-              </p>
-              <p className={classes.second_text}>
-                Create a personal foreign virtual account for your USD, EUR and
-                GBP payments.
+                Shop online, pay your international and utility bills with ease.
               </p>
 
               <div className={classes.btn_section}>
@@ -192,7 +165,40 @@ const MoneyFeatures = () => {
             </div>
 
             <div className={classes.right_feature}>
-              <img src="virtual_account.png" className={classes.img} />
+              <img src="visa.png" className={classes.img} />
+            </div>
+          </div>
+        </div>
+
+        <div className={classes.feature_box}>
+          <div className={classes.inner_flex}>
+            <div className={classes.left_feature}>
+              <div className={classes.title_flex}>
+                <p className={classes.title}>MULTICURRENCY WALLET /</p>
+                <p className={classes.title_white}>COMING SOON</p>
+              </div>
+              <p className={classes.first_text}>
+                Get the freedom to{" "}
+                <span className={classes.colored_text}>
+                  switch between currencies
+                </span>
+                .
+              </p>
+              <p className={classes.second_text}>
+                With Qpay’s multicurrency wallet there’s no limit to spending.
+                Just swipe!
+              </p>
+
+              <div className={classes.btn_section}>
+                <button className={classes.btn}>
+                  <span className={classes.btn_text}>Get Early Access</span>
+                  <HiChevronRight className={classes.btn_icon} />
+                </button>
+              </div>
+            </div>
+
+            <div className={classes.right_feature}>
+              <img src="multicurrency.png" className={classes.img} />
             </div>
           </div>
         </div>
@@ -201,4 +207,4 @@ const MoneyFeatures = () => {
   );
 };
 
-export default MoneyFeatures;
+export default VirtualFeatures;
