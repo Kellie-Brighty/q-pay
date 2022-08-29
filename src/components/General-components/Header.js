@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import { makeStyles, Modal } from "@material-ui/core";
-import { HiChevronDown } from "react-icons/hi";
+import { HiChevronDown, HiOutlineMenu } from "react-icons/hi";
 import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   header: {
     background: "transparent",
     padding: "40px 0px",
-    width: window.innerWidth * 0.833,
     margin: "auto",
     maxWidth: 1200,
+    [theme.breakpoints.down("xs")]: {
+     
+    },
   },
   inner_flex: {
     display: "flex",
@@ -20,16 +22,29 @@ const useStyles = makeStyles((theme) => ({
   logo: {
     width: 114.14,
     cursor: "pointer",
+    [theme.breakpoints.down("xs")]: {
+      width: 83
+    },
   },
   menu_box: {
     display: "flex",
     alignItems: "center",
     width: 578,
     justifyContent: "space-between",
+    [theme.breakpoints.down("xs")]: {
+      display: "none",
+    },
+  },
+  menu_icon: {
+    display: "none",
+    [theme.breakpoints.down("xs")]: {
+      display: "block",
+      color: "#fff",
+      fontSize: 30,
+    },
   },
   menu_item: {
     cursor: "pointer",
-    // margin: "0px 30px",
   },
   menu_text: {
     color: theme.palette.secondary.main,
@@ -110,6 +125,7 @@ const Header = () => {
           />
         </div>
 
+        <HiOutlineMenu className={classes.menu_icon} />
         <div className={classes.menu_box}>
           <div
             className={classes.menu_item}

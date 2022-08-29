@@ -8,11 +8,17 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     padding: "120px 0px",
+    [theme.breakpoints.down("xs")]: {
+      padding: 0
+    },
   },
   title: {
     fontSize: 36,
     fontWeight: "500",
     color: "#fff",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 20,
+    },
   },
   faq_box: {
     margin: "64px 0px",
@@ -27,6 +33,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "500",
     color: theme.palette.secondary.main,
     cursor: "pointer",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 14,
+    },
   },
   text_icon: {
     color: theme.palette.secondary.main,

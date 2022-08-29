@@ -8,11 +8,14 @@ import FAQ from '../components/Home-Components/FAQ';
 import AdsBox from '../components/General-components/AdsBox';
 import Footer from '../components/General-components/Footer';
 
-const useStyles = makeStyles(theme => ({
-    body: {
-        padding: "0px 120px"
-    }
-}))
+const useStyles = makeStyles((theme) => ({
+  body: {
+    padding: "0px 120px",
+    [theme.breakpoints.down("xs")]: {
+      padding: "0px 25px"
+    },
+  },
+}));
 
 const Home = () => {
     const classes = useStyles();

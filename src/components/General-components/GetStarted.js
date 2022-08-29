@@ -13,14 +13,18 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     margin: "auto",
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      flexDirection: "column",
+    },
   },
-  left_box: {
-    
-  },
+  left_box: {},
   first_text: {
     fontSize: 36,
     fontWeight: "500",
     color: "#fff",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 20,
+    },
   },
   second_text: {
     fontSize: 24,
@@ -28,6 +32,10 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.secondary.main,
     width: window.innerWidth * 0.338,
     marginTop: 12,
+    [theme.breakpoints.down("xs")]: {
+      width: 325,
+      fontSize: 14,
+    },
   },
   btn_section: {
     background: "transparent",
@@ -41,6 +49,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 24,
     cursor: "pointer",
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      padding: 15,
+    },
   },
   btn_text: {
     color: theme.palette.primary.white,
@@ -59,9 +70,15 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     margin: "48px 0px",
+    [theme.breakpoints.down("xs")]: {
+      marginTop: 55,
+    },
   },
   no_img: {
     width: window.innerWidth * 0.033,
+    [theme.breakpoints.down("xs")]: {
+      width: 28,
+    },
   },
   text_div: {
     marginLeft: 24,
@@ -70,6 +87,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 24,
     fontWeight: "500",
     color: "#fff",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 18,
+    },
   },
   sub_text: {
     fontSize: 18,
@@ -77,6 +97,10 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.secondary.main,
     width: window.innerWidth * 0.337,
     marginTop: 8,
+    [theme.breakpoints.down("xs")]: {
+      width: 276,
+      fontSize: 12,
+    },
   },
 }));
 
@@ -101,7 +125,7 @@ const GetStarted = () => {
         </div>
 
         <div className={classes.right_box}>
-          <div className={classes.how_box} style={{ marginTop: 0 }}>
+          <div className={classes.how_box}>
             <img src="no_one.png" className={classes.no_img} />
             <div className={classes.text_div}>
               <p className={classes.title_text}>Register in minutes</p>

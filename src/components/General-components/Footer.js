@@ -15,12 +15,18 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     margin: "auto",
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      flexDirection: "column",
+    },
   },
   footer_box: {},
   title: {
     fontSize: 18,
     fontWeight: "600",
     color: theme.palette.primary.white,
+    [theme.breakpoints.down("xs")]: {
+      marginTop: 52,
+    },
   },
   options: {
     marginTop: 32,
@@ -44,16 +50,25 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 18,
     fontWeight: "400",
     color: "#fff",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 14,
+    },
   },
   social_box: {
     display: "flex",
     alignItems: "center",
     width: 196,
     justifyContent: "space-between",
+    [theme.breakpoints.down("xs")]: {
+      width: 112
+    },
   },
   social_icon: {
     width: 28,
     cursor: "pointer",
+    [theme.breakpoints.down("xs")]: {
+      width: 20
+    },
   },
 }));
 
@@ -68,7 +83,7 @@ const Footer = () => {
     <div className={classes.footer}>
       <div className={classes.inner_flex}>
         <div className={classes.footer_box}>
-          <p className={classes.title}>PRODUCTS</p>
+          <p className={classes.title} style={{marginTop: 0}} >PRODUCTS</p>
           <div className={classes.options}>
             <p
               className={classes.option}

@@ -6,6 +6,9 @@ const useStyles = makeStyles((theme) => ({
   body: {
     marginTop: 60,
     padding: "40px 0px",
+    [theme.breakpoints.down("xs")]: {
+      marginTop: 20,
+    },
   },
   text_box: {
     margin: "0px auto",
@@ -14,11 +17,17 @@ const useStyles = makeStyles((theme) => ({
   inner_flex: {
     display: "flex",
     justifyContent: "space-between",
+    [theme.breakpoints.down("xs")]: {
+      flexDirection: "column",
+    },
   },
   first_text: {
     color: theme.palette.secondary.main,
     fontSize: 24,
     fontWeight: "500",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 14,
+    },
   },
   second_text: {
     color: theme.palette.primary.white,
@@ -26,11 +35,20 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "500",
     width: window.innerWidth * 0.467,
     marginTop: 10,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 30,
+      width: 323,
+    },
   },
   first_right_text: {
     color: theme.palette.secondary.main,
     width: window.innerWidth * 0.333,
     fontSize: 24,
+    [theme.breakpoints.down("xs")]: {
+      marginTop: 36,
+      width: 323,
+      fontSize: 18,
+    },
   },
   btn_container: {
     display: "flex",
@@ -44,10 +62,18 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 8,
     marginTop: 20,
     cursor: "pointer",
+    border: "none",
+    outline: "none",
+    [theme.breakpoints.down("xs")]: {
+      width: 150,
+    },
   },
   btn_icon: {
     width: 25,
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      width: 19,
+    },
   },
   get_text: {
     fontSize: 14,
@@ -57,20 +83,32 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
     marginLeft: 14,
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 12,
+    },
   },
   play_store: {
     fontSize: 18,
     color: "#fff",
     fontWeight: "600",
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 14,
+    },
   },
   world_box: {
     display: "flex",
     justifyContent: "center",
     marginTop: 120,
+    [theme.breakpoints.down("xs")]: {
+      marginTop: 64,
+    },
   },
   world_img: {
     width: window.innerWidth * 0.376,
+    [theme.breakpoints.down("xs")]: {
+      width: 266.25,
+    },
   },
 }));
 
@@ -108,14 +146,14 @@ const Hero = () => {
               <button className={classes.hero_btn}>
                 <img src="android.png" className={classes.btn_icon} />
                 <span className={classes.get_text}>
-                  Get it on{" "}
+                  Get it on <br />
                   <span className={classes.play_store}>Play Store</span>
                 </span>
               </button>
               <button className={classes.hero_btn} style={{ marginLeft: 16 }}>
                 <img src="apple.png" className={classes.btn_icon} />
                 <span className={classes.get_text}>
-                  Get it on{" "}
+                  Get it on <br />
                   <span className={classes.play_store}>App Store</span>
                 </span>
               </button>

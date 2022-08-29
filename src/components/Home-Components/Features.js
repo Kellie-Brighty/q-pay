@@ -6,6 +6,9 @@ import svg_two from '../../svgs/svg_two.svg';
 const useStyles = makeStyles((theme) => ({
   body: {
     marginTop: 120,
+    [theme.breakpoints.down("xs")]: {
+      marginTop: 30,
+    },
   },
   title: {
     fontSize: 36,
@@ -14,9 +17,17 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     width: window.innerWidth * 0.453,
     margin: "0px auto",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 20,
+      textAlign: "left",
+      width: 325,
+    },
   },
   second_section: {
     marginTop: 66,
+    [theme.breakpoints.down("xs")]: {
+      marginTop: 48,
+    },
   },
   feature_box: {
     background: "#090909",
@@ -31,12 +42,19 @@ const useStyles = makeStyles((theme) => ({
     padding: 80,
     borderRadius: 8,
     background: "#090909f7",
+    [theme.breakpoints.down("xs")]: {
+      padding: 30,
+    },
   },
   inner_flex: {
     display: "flex",
     justifyContent: "space-between",
     margin: "auto",
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      flexDirection: "column",
+      justifyContent: "center",
+    },
   },
   left_feature: {
     background: "transparent",
@@ -47,6 +65,11 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.white,
     width: window.innerWidth * 0.347,
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 20,
+      width: 270,
+      marginTop: 24,
+    },
   },
   colored_text: {
     color: theme.palette.primary.main,
@@ -59,9 +82,17 @@ const useStyles = makeStyles((theme) => ({
     width: window.innerWidth * 0.347,
     background: "transparent",
     marginTop: 12,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 14,
+      width: 257,
+    },
   },
   btn_section: {
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 14,
+      width: 257,
+    },
   },
   btn: {
     display: "flex",
@@ -72,12 +103,20 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 24,
     cursor: "pointer",
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 14,
+      width: 257,
+      padding: 15,
+    },
   },
   btn_text: {
     color: theme.palette.primary.white,
     fontSize: 18,
     fontWeight: "500",
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 14,
+    },
   },
   btn_icon: {
     color: theme.palette.primary.white,
@@ -88,10 +127,14 @@ const useStyles = makeStyles((theme) => ({
   },
   right_feature: {
     background: "transparent",
+    order: -1,
   },
   img: {
     width: window.innerWidth * 0.277,
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      width: 270,
+    },
   },
 }));
 

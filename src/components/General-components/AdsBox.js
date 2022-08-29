@@ -5,13 +5,10 @@ import svg_one from "../../svgs/svg_one.svg"
 
 const useStyles = makeStyles((theme) => ({
   body: {
-    // padding: "120px 0px",
     display: "flex",
     justifyContent: "center",
     border: "1px solid #1A1A1A",
     borderRadius: 8,
-
-    // paddingLeft: 80,
     marginBottom: 120,
     maxWidth: 1200,
     margin: "0px auto",
@@ -33,6 +30,9 @@ const useStyles = makeStyles((theme) => ({
     width: "90%",
     margin: "auto",
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      flexDirection: "column",
+    },
   },
   left_box: {
     width: window.innerWidth * 0.361,
@@ -41,6 +41,9 @@ const useStyles = makeStyles((theme) => ({
   logo: {
     width: window.innerWidth * 0.083,
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      width: 83,
+    },
   },
   title: {
     fontSize: 36,
@@ -48,6 +51,10 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.white,
     marginTop: 24,
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 20,
+      width: 234,
+    },
   },
   sub_text: {
     color: theme.palette.secondary.main,
@@ -56,6 +63,10 @@ const useStyles = makeStyles((theme) => ({
     width: window.innerWidth * 0.361,
     marginTop: 12,
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      width: 325,
+      fontSize: 14,
+    },
   },
   btn_container: {
     display: "flex",
@@ -70,10 +81,18 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 8,
     marginTop: 20,
     cursor: "pointer",
+    border: "none",
+    outline: "none",
+    [theme.breakpoints.down("xs")]: {
+      width: 150,
+    },
   },
   btn_icon: {
     width: 25,
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      width: 19,
+    },
   },
   get_text: {
     fontSize: 14,
@@ -83,12 +102,18 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
     marginLeft: 14,
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 12,
+    },
   },
   play_store: {
     fontSize: 18,
     color: "#fff",
     fontWeight: "600",
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 14,
+    },
   },
   last_text: {
     marginTop: 64,
@@ -96,6 +121,10 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 24,
     fontWeight: "500",
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 15,
+      width: 309,
+    },
   },
   right_box: {
     width: window.innerWidth * 0.412,
@@ -103,12 +132,18 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     overflow: "hidden",
     alignSelf: "flex-end",
+    [theme.breakpoints.down("xs")]: {
+      width: "100%"
+    },
   },
   img: {
-    // width: window.innerWidth * 0.382,
     width: 594,
     background: "transparent",
     marginLeft: -50,
+    [theme.breakpoints.down("xs")]: {
+      width: 400,
+      marginTop: 57
+    },
   },
 }));
 
