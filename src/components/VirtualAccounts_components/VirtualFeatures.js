@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
 import { HiChevronRight } from "react-icons/hi";
+import svg_two from "../../svgs/svg_two.svg";
 
 const useStyles = makeStyles((theme) => ({
   body: {
@@ -18,11 +19,18 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 66,
   },
   feature_box: {
-    padding: 80,
     background: "#090909",
     border: "0.5px solid rgb(40, 40, 40)",
     margin: "20px auto",
     maxWidth: 1200,
+    backgroundImage: `url("${svg_two}")`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+  },
+  overlay: {
+    padding: 80,
+    borderRadius: 8,
+    background: "#090909f7",
   },
   inner_flex: {
     display: "flex",
@@ -92,10 +100,12 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 14,
     fontWeight: "600",
     color: theme.palette.secondary.main,
+    background: "transparent",
   },
   title_flex: {
     display: "flex",
     alignItems: "center",
+    background: "transparent",
   },
   title_white: {
     letterSpacing: 4,
@@ -112,93 +122,100 @@ const VirtualFeatures = () => {
     <div className={classes.body}>
       <div className={classes.second_section}>
         <div className={classes.feature_box}>
-          <div className={classes.inner_flex}>
-            <div className={classes.left_feature}>
-              <div className={classes.title_flex}>
-                <p className={classes.title}>VIRTUAL ACCOUNT /</p>
-                <p className={classes.title_white}>COMING SOON</p>
-              </div>
-              <p className={classes.first_text}>
-                Make money move{" "}
-                <span className={classes.colored_text}>across borders</span>.
-              </p>
-              <p className={classes.second_text}>
-                Crete a personal foreign virtual account for USD, EUR and GBP
-                payments
-              </p>
+          <div className={classes.overlay}>
+            <div className={classes.inner_flex}>
+              <div className={classes.left_feature}>
+                <div className={classes.title_flex}>
+                  <p className={classes.title}>VIRTUAL ACCOUNT /</p>
+                  <p className={classes.title_white}>COMING SOON</p>
+                </div>
+                <p className={classes.first_text}>
+                  Make money move{" "}
+                  <span className={classes.colored_text}>across borders</span>.
+                </p>
+                <p className={classes.second_text}>
+                  Crete a personal foreign virtual account for USD, EUR and GBP
+                  payments
+                </p>
 
-              <div className={classes.btn_section}>
-                <button className={classes.btn}>
-                  <span className={classes.btn_text}>Get your username</span>
-                  <HiChevronRight className={classes.btn_icon} />
-                </button>
+                <div className={classes.btn_section}>
+                  <button className={classes.btn}>
+                    <span className={classes.btn_text}>Get your username</span>
+                    <HiChevronRight className={classes.btn_icon} />
+                  </button>
+                </div>
               </div>
-            </div>
 
-            <div className={classes.right_feature}>
-              <img src="virtual_account.png" className={classes.img} />
+              <div className={classes.right_feature}>
+                <img src="virtual_account.png" className={classes.img} />
+              </div>
             </div>
           </div>
         </div>
 
         <div className={classes.feature_box}>
-          <div className={classes.inner_flex}>
-            <div className={classes.left_feature}>
-              <div className={classes.title_flex}>
-                <p className={classes.title}>VIRTUAL ACCOUNT /</p>
-                <p className={classes.title_white}>COMING SOON</p>
-              </div>
-              <p className={classes.first_text}>
-                Make seamless transactions with{" "}
-                <span className={classes.colored_text}>virtual cards</span>.
-              </p>
-              <p className={classes.second_text}>
-                Shop online, pay your international and utility bills with ease.
-              </p>
+          <div className={classes.overlay}>
+            <div className={classes.inner_flex}>
+              <div className={classes.left_feature}>
+                <div className={classes.title_flex}>
+                  <p className={classes.title}>VIRTUAL ACCOUNT /</p>
+                  <p className={classes.title_white}>COMING SOON</p>
+                </div>
+                <p className={classes.first_text}>
+                  Make seamless transactions with{" "}
+                  <span className={classes.colored_text}>virtual cards</span>.
+                </p>
+                <p className={classes.second_text}>
+                  Shop online, pay your international and utility bills with
+                  ease.
+                </p>
 
-              <div className={classes.btn_section}>
-                <button className={classes.btn}>
-                  <span className={classes.btn_text}>Get Early Access</span>
-                  <HiChevronRight className={classes.btn_icon} />
-                </button>
+                <div className={classes.btn_section}>
+                  <button className={classes.btn}>
+                    <span className={classes.btn_text}>Get Early Access</span>
+                    <HiChevronRight className={classes.btn_icon} />
+                  </button>
+                </div>
               </div>
-            </div>
 
-            <div className={classes.right_feature}>
-              <img src="visa.png" className={classes.img} />
+              <div className={classes.right_feature}>
+                <img src="visa.png" className={classes.img} />
+              </div>
             </div>
           </div>
         </div>
 
         <div className={classes.feature_box}>
-          <div className={classes.inner_flex}>
-            <div className={classes.left_feature}>
-              <div className={classes.title_flex}>
-                <p className={classes.title}>MULTICURRENCY WALLET /</p>
-                <p className={classes.title_white}>COMING SOON</p>
-              </div>
-              <p className={classes.first_text}>
-                Get the freedom to{" "}
-                <span className={classes.colored_text}>
-                  switch between currencies
-                </span>
-                .
-              </p>
-              <p className={classes.second_text}>
-                With Qpay’s multicurrency wallet there’s no limit to spending.
-                Just swipe!
-              </p>
+          <div className={classes.overlay}>
+            <div className={classes.inner_flex}>
+              <div className={classes.left_feature}>
+                <div className={classes.title_flex}>
+                  <p className={classes.title}>MULTICURRENCY WALLET /</p>
+                  <p className={classes.title_white}>COMING SOON</p>
+                </div>
+                <p className={classes.first_text}>
+                  Get the freedom to{" "}
+                  <span className={classes.colored_text}>
+                    switch between currencies
+                  </span>
+                  .
+                </p>
+                <p className={classes.second_text}>
+                  With Qpay’s multicurrency wallet there’s no limit to spending.
+                  Just swipe!
+                </p>
 
-              <div className={classes.btn_section}>
-                <button className={classes.btn}>
-                  <span className={classes.btn_text}>Get Early Access</span>
-                  <HiChevronRight className={classes.btn_icon} />
-                </button>
+                <div className={classes.btn_section}>
+                  <button className={classes.btn}>
+                    <span className={classes.btn_text}>Get Early Access</span>
+                    <HiChevronRight className={classes.btn_icon} />
+                  </button>
+                </div>
               </div>
-            </div>
 
-            <div className={classes.right_feature}>
-              <img src="multicurrency.png" className={classes.img} />
+              <div className={classes.right_feature}>
+                <img src="multicurrency.png" className={classes.img} />
+              </div>
             </div>
           </div>
         </div>

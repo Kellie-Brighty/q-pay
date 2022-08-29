@@ -1,5 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
+import "./hero.css";
 
 const useStyles = makeStyles((theme) => ({
   body: {
@@ -25,9 +26,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "500",
     width: window.innerWidth * 0.467,
     marginTop: 10,
-  },
-  changing_text: {
-    color: theme.palette.primary.main,
   },
   first_right_text: {
     color: theme.palette.secondary.main,
@@ -87,8 +85,18 @@ const Hero = () => {
               Better Rates. Swift Payment. Zero Borders.
             </p>
             <p className={classes.second_text}>
-              Borderless Payment Solution for the African{" "}
-              <span className={classes.changing_text}>Freelancer</span>
+              Borderless Payment Solution for the African
+              <span className="changing_text" id="flip">
+                <div>
+                  <div>Freelancer</div>
+                </div>
+                <div>
+                  <div>Enterpreneur</div>
+                </div>
+                <div>
+                  <div>Content Creator</div>
+                </div>
+              </span>
             </p>
           </div>
           <div className={classes.right_box}>

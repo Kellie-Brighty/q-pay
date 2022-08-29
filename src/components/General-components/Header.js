@@ -1,5 +1,5 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core";
+import React, { useState } from "react";
+import { makeStyles, Modal } from "@material-ui/core";
 import { HiChevronDown } from "react-icons/hi";
 import { useNavigate } from "react-router-dom";
 
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     width: 578,
-    justifyContent: 'space-between'
+    justifyContent: "space-between",
   },
   menu_item: {
     cursor: "pointer",
@@ -47,10 +47,53 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
     borderRadius: 8,
   },
+  modal_body: {
+    display: "flex",
+    justifyContent: "center",
+    outline: "none",
+    alignItems: "center",
+    background: "transparent",
+  },
+  inner_modal: {
+    color: "#fff",
+    marginTop: 100,
+    background: "transparent",
+    background: "#090909",
+    padding: "60px 40px",
+  },
+  modal_list: {
+    display: "flex",
+    alignItems: "center",
+    marginTop: 40,
+    background: "transparent",
+    cursor: "pointer",
+  },
+  modal_icon: {
+    width: 45,
+    background: "transparent",
+  },
+  modal_title: {
+    color: "#fff",
+    fontSize: 20,
+    fontWeight: "500",
+    background: "transparent",
+  },
+  modal_text: {
+    fontSize: 14,
+    color: theme.palette.secondary.main,
+    background: "transparent",
+    marginTop: 4,
+  },
+  text_div: {
+    marginLeft: 20,
+    background: "transparent",
+  },
 }));
 
 const Header = () => {
   const classes = useStyles();
+  const [modalOpen, setModalOpen] = useState(false);
+
   const navigate = useNavigate();
   const route = (route) => {
     navigate(`/${route}`);
@@ -71,6 +114,7 @@ const Header = () => {
           <div
             className={classes.menu_item}
             style={{ display: "flex", alignItems: "center" }}
+            onClick={() => setModalOpen(true)}
           >
             <p className={classes.menu_text}>Products</p>
             <HiChevronDown className={classes.menu_dropdown_icon} />
@@ -86,6 +130,54 @@ const Header = () => {
           </div>
         </div>
       </div>
+
+      <Modal
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+        style={{ background: "transparent" }}
+      >
+        <div className={classes.modal_body} onClick={() => setModalOpen(false)}>
+          <div className={classes.inner_modal}>
+            <div
+              className={classes.modal_list}
+              style={{ marginTop: 0 }}
+              onClick={() => route("money_transfer")}
+            >
+              <img src="money.png" className={classes.modal_icon} />
+              <div className={classes.text_div}>
+                <p className={classes.modal_title}>Money Transfer</p>
+                <p className={classes.modal_text}>
+                  Get paid by foreign clients with no hassle...
+                </p>
+              </div>
+            </div>
+            <div
+              className={classes.modal_list}
+              onClick={() => route("currency_exchange")}
+            >
+              <img src="currency.png" className={classes.modal_icon} />
+              <div className={classes.text_div}>
+                <p className={classes.modal_title}>Currency Exchange</p>
+                <p className={classes.modal_text}>
+                  Better rates for every currency exchange...
+                </p>
+              </div>
+            </div>
+            <div
+              className={classes.modal_list}
+              onClick={() => route("virtual_accounts")}
+            >
+              <img src="money.png" className={classes.modal_icon} />
+              <div className={classes.text_div}>
+                <p className={classes.modal_title}>Multicurrency wallet</p>
+                <p className={classes.modal_text}>
+                  Welcome to a word of limitless financial...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Modal>
     </header>
   );
 };

@@ -103,10 +103,19 @@ const Footer = () => {
         <div className={classes.footer_box}>
           <p className={classes.title}>LEGAL</p>
           <div className={classes.options}>
-            <p className={classes.option} style={{ marginTop: 0 }}>
+            <p
+              className={classes.option}
+              style={{ marginTop: 0 }}
+              onClick={() => route("privacy_policy")}
+            >
               Privacy Policy
             </p>
-            <p className={classes.option}>Terms and Conditions</p>
+            <p
+              className={classes.option}
+              onClick={() => route("terms_and_conditions")}
+            >
+              Terms and Conditions
+            </p>
           </div>
         </div>
         <div className={classes.footer_box}>
