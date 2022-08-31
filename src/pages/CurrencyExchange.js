@@ -9,9 +9,17 @@ import AdsBox from "../components/General-components/AdsBox";
 import Footer from "../components/General-components/Footer";
 
 const useStyles = makeStyles((theme) => ({
+  mainBody: {
+    [theme.breakpoints.down("xs")]: {
+      padding: "0px 25px",
+    },
+  },
   body: {
     padding: "0px 120px",
     color: "#fff",
+    [theme.breakpoints.down("xs")]: {
+      padding: "0px 25px",
+    },
   },
 }));
 
@@ -25,7 +33,9 @@ const CurrencyExchange = () => {
 
   return (
     <div>
-      <Header />
+      <div className={classes.mainBody}>
+        <Header />
+      </div>
       <DynamicNav />
       <div className={classes.body}>
         <CurrencyHero />

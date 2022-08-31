@@ -9,9 +9,17 @@ import MoneyHero from "../components/MoneyTransfer-components/MoneyHero";
 import MoneyFeatures from "../components/MoneyTransfer-components/MoneyFeatures";
 
 const useStyles = makeStyles((theme) => ({
+  mainBody: {
+    [theme.breakpoints.down("xs")]: {
+      padding: "0px 25px",
+    },
+  },
   body: {
     padding: "0px 120px",
     color: "#fff",
+    [theme.breakpoints.down("xs")]: {
+      padding: "0px 25px",
+    },
   },
 }));
 
@@ -20,7 +28,9 @@ const MoneyTransfer = () => {
 
   return (
     <div>
-      <Header />
+      <div className={classes.mainBody}>
+        <Header />
+      </div>
       <DynamicNav />
       <div className={classes.body}>
         <MoneyHero />

@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
 import { HiChevronRight } from "react-icons/hi";
-import svg_two from '../../svgs/svg_two.svg';
+import svg_two from "../../svgs/svg_two.svg";
 
 const useStyles = makeStyles((theme) => ({
   body: {
@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 20,
       textAlign: "left",
       width: 325,
+      margin: "auto",
     },
   },
   second_section: {
@@ -33,10 +34,13 @@ const useStyles = makeStyles((theme) => ({
     background: "#090909",
     border: "0.5px solid rgb(40, 40, 40)",
     margin: "20px auto",
-    maxWidth: 1200,
     backgroundImage: `url("${svg_two}")`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
+    backgroundPosition: "center",
+    [theme.breakpoints.down("xs")]: {
+      width: 325,
+    },
   },
   overlay: {
     padding: 80,
@@ -91,7 +95,6 @@ const useStyles = makeStyles((theme) => ({
     background: "transparent",
     [theme.breakpoints.down("xs")]: {
       fontSize: 14,
-      width: 257,
     },
   },
   btn: {
@@ -105,8 +108,8 @@ const useStyles = makeStyles((theme) => ({
     background: "transparent",
     [theme.breakpoints.down("xs")]: {
       fontSize: 14,
-      width: 257,
       padding: 15,
+      alignItems: "center",
     },
   },
   btn_text: {
@@ -127,7 +130,9 @@ const useStyles = makeStyles((theme) => ({
   },
   right_feature: {
     background: "transparent",
-    order: -1,
+    [theme.breakpoints.down("xs")]: {
+      order: -1,
+    },
   },
   img: {
     width: window.innerWidth * 0.277,

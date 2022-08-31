@@ -5,22 +5,36 @@ const useStyles = makeStyles((theme) => ({
   body: {
     maxWidth: 1200,
     margin: "60px auto",
+    [theme.breakpoints.down("xs")]: {
+      marginTop: 20,
+      margin: "auto",
+      width: 323,
+    },
   },
   inner_body: {
     width: "100%",
     margin: "auto",
+    [theme.breakpoints.down("xs")]: {
+      width: 323,
+    },
   },
   title: {
     fontSize: 18,
     fontWeight: "600",
     color: theme.palette.secondary.main,
     letterSpacing: 4,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 14,
+    },
   },
   white_title: {
     fontSize: 40,
     fontWeight: "500",
     color: "#fff",
     marginTop: 8,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 30,
+    },
   },
   grey_text: {
     fontSize: 24,
@@ -28,11 +42,15 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.secondary.main,
     width: 1036,
     marginTop: 16,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 18,
+      width: 323,
+    },
   },
   btn_container: {
     display: "flex",
     alignItems: "center",
-    marginTop: 32
+    marginTop: 32,
   },
   hero_btn: {
     display: "flex",
@@ -42,10 +60,18 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 8,
     marginTop: 20,
     cursor: "pointer",
+    border: "none",
+    outline: "none",
+    [theme.breakpoints.down("xs")]: {
+      width: 150,
+    },
   },
   btn_icon: {
     width: 25,
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      width: 19,
+    },
   },
   get_text: {
     fontSize: 14,
@@ -55,12 +81,18 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
     marginLeft: 14,
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 12,
+    },
   },
   play_store: {
     fontSize: 18,
     color: "#fff",
     fontWeight: "600",
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 14,
+    },
   },
 }));
 

@@ -7,18 +7,29 @@ import AdsBox from "../components/General-components/AdsBox";
 import Footer from "../components/General-components/Footer";
 
 const useStyles = makeStyles((theme) => ({
-  body: {},
+  mainBody: {
+    [theme.breakpoints.down("xs")]: {
+      padding: "0px 30px",
+    },
+  },
   title: {
     textAlign: "center",
     color: "#fff",
     fontSize: 34,
     color: theme.palette.primary.white,
     marginTop: 64,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 30,
+      textAlign: "left",
+    },
   },
   text_body: {
     // padding: "0px 120px",
     maxWidth: 1200,
     margin: "auto",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 14,
+    },
   },
   body_text: {
     color: theme.palette.secondary.main,
@@ -36,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
 const TermsAndConditions = () => {
   const classes = useStyles();
   return (
-    <div>
+    <div className={classes.mainBody}>
       <Header />
       <div className={classes.body}>
         <p className={classes.title}>Terms and conditions</p>

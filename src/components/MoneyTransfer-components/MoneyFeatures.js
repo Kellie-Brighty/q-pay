@@ -7,16 +7,26 @@ const useStyles = makeStyles((theme) => ({
   body: {
     marginTop: 120,
   },
-  title: {
-    fontSize: 36,
-    fontWeight: "500",
-    color: "#fff",
-    textAlign: "center",
-    width: window.innerWidth * 0.453,
-    margin: "0px auto",
-  },
+  // title: {
+  //   fontSize: 36,
+  //   fontWeight: "500",
+  //   color: "#fff",
+  //   textAlign: "center",
+  //   width: window.innerWidth * 0.453,
+  //   margin: "0px auto",
+  //   [theme.breakpoints.down("xs")]: {
+  //     fontSize: 20,
+  //     textAlign: "left",
+  //     width: 227,
+  //     margin: "auto",
+  //     // marginTop: 1000,
+  //   },
+  // },
   second_section: {
     marginTop: 66,
+    [theme.breakpoints.down("xs")]: {
+      marginTop: 48,
+    },
   },
   feature_box: {
     background: "#090909",
@@ -26,11 +36,18 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: `url("${svg_two}")`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
+    backgroundPosition: "center",
+    [theme.breakpoints.down("xs")]: {
+      width: 325,
+    },
   },
   overlay: {
     padding: 80,
     borderRadius: 8,
     background: "#090909f7",
+    [theme.breakpoints.down("xs")]: {
+      padding: 30,
+    },
   },
   inner_flex: {
     display: "flex",
@@ -38,6 +55,10 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto",
     background: "transparent",
     alignItems: "center",
+    [theme.breakpoints.down("xs")]: {
+      flexDirection: "column",
+      justifyContent: "center",
+    },
   },
   left_feature: {
     background: "transparent",
@@ -50,6 +71,11 @@ const useStyles = makeStyles((theme) => ({
     background: "transparent",
     marginTop: 12,
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 20,
+      width: 270,
+      marginTop: 24,
+    },
   },
   colored_text: {
     color: theme.palette.primary.main,
@@ -62,9 +88,16 @@ const useStyles = makeStyles((theme) => ({
     width: window.innerWidth * 0.347,
     background: "transparent",
     marginTop: 12,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 14,
+      width: 257,
+    },
   },
   btn_section: {
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 14,
+    },
   },
   btn: {
     display: "flex",
@@ -75,12 +108,20 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 24,
     cursor: "pointer",
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 14,
+      padding: 15,
+      alignItems: "center",
+    },
   },
   btn_text: {
     color: theme.palette.primary.white,
     fontSize: 18,
     fontWeight: "500",
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 14,
+    },
   },
   btn_icon: {
     color: theme.palette.primary.white,
@@ -91,10 +132,16 @@ const useStyles = makeStyles((theme) => ({
   },
   right_feature: {
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      order: -1,
+    },
   },
   img: {
     width: window.innerWidth * 0.277,
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      width: 270,
+    },
   },
   title: {
     letterSpacing: 4,
@@ -102,6 +149,13 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "600",
     color: theme.palette.secondary.main,
     background: "transparent",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 12,
+      textAlign: "left",
+      width: 227,
+      // margin: "auto",
+      marginTop: 20,
+    },
   },
   title_flex: {
     display: "flex",
@@ -154,10 +208,10 @@ const MoneyFeatures = () => {
           <div className={classes.overlay}>
             <div className={classes.inner_flex}>
               <div className={classes.left_feature}>
-                <div className={classes.title_flex}>
-                  <p className={classes.title}>QPAY EXPRESS /</p>
-                  <p className={classes.title_white}>COMING SOON</p>
-                </div>
+                <p className={classes.title}>
+                  QPAY EXPRESS /{" "}
+                  <span className={classes.title_white}>COMING SOON</span>
+                </p>
                 <p className={classes.first_text}>
                   Get your money wired to naira{" "}
                   <span className={classes.colored_text}>in seconds</span>.
@@ -186,10 +240,10 @@ const MoneyFeatures = () => {
           <div className={classes.overlay}>
             <div className={classes.inner_flex}>
               <div className={classes.left_feature}>
-                <div className={classes.title_flex}>
-                  <p className={classes.title}>FOREIGN VIRTUAL ACCOUNT /</p>
-                  <p className={classes.title_white}>COMING SOON</p>
-                </div>
+                <p className={classes.title}>
+                  FOREIGN VIRTUAL ACCOUNT /{" "}
+                  <span className={classes.title_white}>COMING SOON</span>
+                </p>
                 <p className={classes.first_text}>
                   Request and get your{" "}
                   <span className={classes.colored_text}>global account</span>.

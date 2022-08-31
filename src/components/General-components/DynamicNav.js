@@ -8,23 +8,34 @@ const useStyles = makeStyles((theme) => ({
     padding: "30px 120px",
     maxWidth: 1200,
     margin: "auto",
+    [theme.breakpoints.down("xs")]: {
+      padding: "30px 25px",
+    },
   },
   inner_flex: {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
+    
   },
   white_text: {
     display: "flex",
     alignItems: "center",
     color: theme.palette.primary.white,
     marginLeft: 8,
+    // [theme.breakpoints.down("xs")]: {
+    //   width: 196,
+    // },
   },
   product_text: {
     display: "flex",
     alignItems: "center",
     color: theme.palette.secondary.main,
     fontSize: 20,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 14,
+      width: 375,
+    },
   },
   down_arrow: {
     color: theme.palette.secondary.main,
@@ -34,21 +45,28 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    // width: 489,
-    // margin: "auto"
+    [theme.breakpoints.down("xs")]: {
+      display: "none",
+    },
   },
   menu_item: {
     fontSize: 18,
     fontWeight: "500",
     color: theme.palette.secondary.main,
     cursor: "pointer",
+    [theme.breakpoints.down("xs")]: {
+      display: "none",
+    },
   },
   menu_item_sub: {
     fontSize: 18,
     fontWeight: "500",
     color: theme.palette.secondary.main,
     cursor: "pointer",
-    marginLeft: 30
+    marginLeft: 30,
+    [theme.breakpoints.down("xs")]: {
+      display: "none",
+    },
   },
 }));
 
@@ -95,7 +113,9 @@ const DynamicNav = () => {
                     <div className={classes.menu_box}>
                       <p className={classes.menu_item}>Virtual Account</p>
                       <p className={classes.menu_item_sub}>Virtual Card</p>
-                      <p className={classes.menu_item_sub}>Multicurrency wallets</p>
+                      <p className={classes.menu_item_sub}>
+                        Multicurrency wallets
+                      </p>
                     </div>
                   </>
                 ) : (

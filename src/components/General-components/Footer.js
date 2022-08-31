@@ -146,7 +146,7 @@ const Footer = () => {
       </div>
 
       <div className={classes.divider}>
-        <p className={classes.first_text}>© Aza Finance, 2022</p>
+        <p className={classes.first_text}>© Aza Technology, 2022</p>
 
         <div className={classes.social_box}>
           <img src="twitter.png" className={classes.social_icon} />

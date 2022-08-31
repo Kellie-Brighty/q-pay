@@ -16,6 +16,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: `url("${svg_one}")`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
+    [theme.breakpoints.down("xs")]: {
+      marginTop: 120
+    },
   },
   overlay: {
     width: "100%",
@@ -133,7 +136,7 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
     alignSelf: "flex-end",
     [theme.breakpoints.down("xs")]: {
-      width: "100%"
+      width: "100%",
     },
   },
   img: {
@@ -142,7 +145,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: -50,
     [theme.breakpoints.down("xs")]: {
       width: 400,
-      marginTop: 57
+      marginTop: 57,
     },
   },
 }));

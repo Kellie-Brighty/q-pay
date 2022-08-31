@@ -9,9 +9,17 @@ import VirtualHero from "../components/VirtualAccounts_components/VirtualHero";
 import VirtualFeatures from "../components/VirtualAccounts_components/VirtualFeatures";
 
 const useStyles = makeStyles((theme) => ({
+  mainBody: {
+    [theme.breakpoints.down("xs")]: {
+      padding: "0px 25px",
+    },
+  },
   body: {
     padding: "0px 120px",
     color: "#fff",
+    [theme.breakpoints.down("xs")]: {
+      padding: "0px 25px",
+    },
   },
 }));
 
@@ -23,16 +31,18 @@ const VirtualAccounts = () => {
       document.body.scrollTop = 0;
     }
   };
-  window.onscroll = scrollToTop()
+  window.onscroll = scrollToTop();
 
   useEffect(() => {
-    scrollToTop()
-    console.log(document.body.scrollTop)
-  }, [])
+    scrollToTop();
+    console.log(document.body.scrollTop);
+  }, []);
 
   return (
     <div>
-      <Header />
+      <div className={classes.mainBody}>
+        <Header />
+      </div>
       <DynamicNav />
       <div className={classes.body}>
         <VirtualHero />

@@ -7,6 +7,9 @@ const useStyles = makeStyles((theme) => ({
     margin: "0px auto",
     padding: "120px 0px",
     maxWidth: 1200,
+    [theme.breakpoints.down("xs")]: {
+      padding: "50px 0px",
+    },
   },
   inner_flex: {
     display: "flex",
