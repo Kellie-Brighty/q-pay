@@ -1,6 +1,5 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
-import Globe from '../../svgs/globe_connect.svg'
 import "./hero.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -166,7 +165,7 @@ const Hero = () => {
       </div>
 
       <div className={classes.world_box}>
-        <img src={Globe} className={classes.world_img} />
+        <img src="world.png" className={classes.world_img} />
       </div>
     </div>
   );

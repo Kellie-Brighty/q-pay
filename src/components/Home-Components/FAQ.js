@@ -20,7 +20,9 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
     [theme.breakpoints.down("xs")]: {
       fontSize: 20,
+      textAlign: 'left'
     },
+    textAlign: 'center'
   },
   faq_box: {
     margin: "64px 0px",
@@ -96,7 +98,7 @@ const FAQ = () => {
               titleTextColor: "#fff",
               rowTitleColor: "#fff",
               rowTitleTextSize: "18px",
-              rowContentColor: "#f9f9f9",
+              rowContentColor: "#5a5a5a",
               rowContentTextSize: "16px",
               rowContentPaddingTop: "10px",
               rowContentPaddingBottom: "10px",

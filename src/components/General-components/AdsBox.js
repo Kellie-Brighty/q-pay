@@ -160,8 +160,7 @@ const AdsBox = () => {
             <img src="logo.png" className={classes.logo} />
             <p className={classes.title}>Get started now, It’s free</p>
             <p className={classes.sub_text}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim,
-              mauris sem neque amet nunc nisl velit tincidunt amet.
+              It's Quick, It's Better and it's for You.
             </p>
             <div className={classes.btn_container}>
               <button className={classes.hero_btn}>

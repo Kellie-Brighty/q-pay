@@ -160,6 +160,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "600",
     color: theme.palette.primary.white,
     marginLeft: 8,
+    background: "transparent",
   },
 }));
 
